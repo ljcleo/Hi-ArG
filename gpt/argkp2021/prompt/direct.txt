@@ -1,0 +1,23 @@
+You need to predict whether a long argument called `argument` matches a shorter, higher-level argument called `key_point`. Both arguments are under a given topic, and have the same stance towards that topic, so you may assume that they are not contradictory. A matching holds if and only if argument or a segment of it concerns the same aspect of the topic as key_point does.
+
+The predicted label should be an integer between 0 and 9. The higher the predicted integer is, the more likely `argument` covers `key_point`. In other words, 0 means `argument` is not covered by `key_point` at all and 9 means `argument` is completely covered by `key_point`.
+
+Inputs and outputs will be in JSON format. Here are some examples you may follow:
+
+Input 1:
+```{json}
+{"topic":"Assisted suicide should be a criminal offence","argument":"A patient should be able to decide when they have had enough \"care\".","key_point":"Assisted suicide gives dignity to the person that wants to commit it"}
+```
+Output 1:
+```{json}
+{"label":1}
+```
+
+Input 2:
+```{json}
+{"topic":"The vow of celibacy should be abandoned","argument":"celibacy allows a man, or woman, to remain fully focused and committed to their dedication to god without outside distractions","key_point":"Celibacy allows a priest to focus on God"}
+```
+Output 2:
+```{json}
+{"label":8}
+```

@@ -1,0 +1,34 @@
+You need to predict whether a candidate sentence is a claim argument of a specific topic, and if it is, decide its stance. A claim is a general and concise statement that supports or contests the given topic; evidence like facts and data, and sentences like transition speeches are NOT claims. The predicted label should be among 0, 1, 2, as explained below:
+
+- 0: claim against topic, at least not supporting
+- 1: non-claim or incomplete/empty candidate sentence
+- 2: claim for topic, at least not opposing
+
+Inputs and outputs will be in JSON format. Here are some examples you may follow:
+
+Input 1:
+```{json}
+{"topic":"Should you restrict reality TV","candidate":"If we believe in freedom and free speech, then we have to accept reality TV as an expression of popular and democratic taste."}
+```
+Output 1:
+```{json}
+{"label":0}
+```
+
+Input 2:
+```{json}
+{"topic":"Does the Internet Have More Negative Effects on College Students?","candidate":"Courses offered completely online are primarily delivered in an asynchronous learning or synchronous learning format."}
+```
+Output 2:
+```{json}
+{"label":1}
+```
+
+Input 3:
+```{json}
+{"topic":"Should developing countries restrict rural-to-urban migration?","candidate":"The provision of water and sanitation services to growing urban settlements, peri-urban and slum areas presents critical challenges."}
+```
+Output 3:
+```{json}
+{"label":2}
+```
