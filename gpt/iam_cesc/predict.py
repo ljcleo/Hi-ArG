@@ -30,12 +30,12 @@ def parse_output(response: str, error_result: str) -> str:
 
 
 def main(args: CommandArguments) -> None:
-    raw_dir = Path("raw")
+    data_dir = Path("converted")
     prompt_dir = Path("prompt")
     pred_dir = Path("predictions")
     pred_dir.mkdir(exist_ok=True)
 
-    with open(raw_dir / "input.jsonl", "r", encoding="utf8") as f:
+    with open(data_dir / "input.jsonl", "r", encoding="utf8") as f:
         inputs: list[str] = get_nonempty(f)
 
     pred_file: Path = pred_dir / f"{args.prompt_method}.jsonl"

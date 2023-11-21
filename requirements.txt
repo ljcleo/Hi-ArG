@@ -1,0 +1,23 @@
+# Common
+numpy
+pandas
+pandarallel
+torch
+transformers
+
+# For graph generation
+amrlib
+penman
+smatch
+spacy
+tqdm
+unidecode
+word2number
+
+# For model training
+scipy
+torch_geometric
+wandb
+
+# For ChatGPT experinemts
+openai

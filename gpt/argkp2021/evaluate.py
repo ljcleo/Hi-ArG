@@ -15,13 +15,13 @@ def calc_ap(label: np.ndarray, relax: bool) -> float:
 
 
 if __name__ == "__main__":
-    raw_dir = Path("raw")
+    data_dir = Path("converted")
     pred_dir = Path("prediction")
     eval_dir = Path("evaluation")
     eval_dir.mkdir(exist_ok=True)
 
-    inputs: pd.DataFrame = pd.read_json(raw_dir / "input.jsonl", lines=True)
-    outputs: pd.DataFrame = pd.read_json(raw_dir / "output.jsonl", lines=True)
+    inputs: pd.DataFrame = pd.read_json(data_dir / "input.jsonl", lines=True)
+    outputs: pd.DataFrame = pd.read_json(data_dir / "output.jsonl", lines=True)
 
     for prompt_method in ("direct", "explain"):
         predictions: pd.DataFrame = (

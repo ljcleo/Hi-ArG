@@ -1,12 +1,9 @@
 #!/usr/bin/env bash
 
 pae() {
-    echo $@
-    $@
+    echo ${@}
+    ${@}
 }
-
-. '/usr/local/miniconda3/etc/profile.d/conda.sh'
-conda activate neural
 
 seed=${1}
 mode=${2}

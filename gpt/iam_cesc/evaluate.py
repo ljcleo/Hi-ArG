@@ -6,12 +6,12 @@ import pandas as pd
 
 
 if __name__ == "__main__":
-    raw_dir = Path("raw")
+    data_dir = Path("converted")
     pred_dir = Path("prediction")
     eval_dir = Path("evaluation")
     eval_dir.mkdir(exist_ok=True)
 
-    labels: np.ndarray = pd.read_json(raw_dir / "output.jsonl", lines=True)["label"].to_numpy()
+    labels: np.ndarray = pd.read_json(data_dir / "output.jsonl", lines=True)["label"].to_numpy()
 
     for prompt_method in ("direct", "explain"):
         predictions: np.ndarray = pd.read_json(pred_dir / f"{prompt_method}.jsonl", lines=True)[
