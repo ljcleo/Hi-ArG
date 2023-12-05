@@ -1,6 +1,6 @@
 # Hi-ArG
 
-Code repository of "Hi-ArG: Exploring the Integration of Hierarchical Argumentation Graphs in Language Pretraining".
+Code repository of [Hi-ArG: Exploring the Integration of Hierarchical Argumentation Graphs in Language Pretraining](https://arxiv.org/abs/2312.00874).
 
 ## Requirements
 
@@ -54,4 +54,13 @@ To run ChatGPT experiments, make sure that raw data files are prepared under `ar
 
 ## Citation
 
-TODO
+```bibtex
+@Article{Liang2023Hi,
+  author        = {Liang, Jingcong and Ye, Rong and Han, Meng and Zhang, Qi and Lai, Ruofei and Zhang, Xinyu and Cao, Zhao and Huang, Xuanjing and Wei, Zhongyu},
+  title         = {Hi-ArG: Exploring the Integration of Hierarchical Argumentation Graphs in Language Pretraining},
+  year          = {2023},
+  archiveprefix = {arXiv},
+  eprint        = {2312.00874},
+  primaryclass  = {cs.CL},
+}
+```
